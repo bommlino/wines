@@ -1,0 +1,22 @@
+{
+  "name": "tresmo-wines",
+  "version": "1.0.0",
+  "description": "Wine App - Tresmo developer challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bommlino/wines.git"
+  },
+  "author": "Thomas Manhardt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bommlino/wines/issues"
+  },
+  "homepage": "https://github.com/bommlino/wines#readme",
+  "dependencies": {
+    "restify": "^6.3.4"
+  }
+}
