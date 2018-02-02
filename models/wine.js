@@ -1,5 +1,5 @@
-const mongoose = require('mongoose');
-const mongooseStringQuery = require('mongoose-string-query');
+const mongoose = require('mongoose')
+const mongooseStringQuery = require('mongoose-string-query')
 
 const WineSchema = new mongoose.Schema(
 	{
@@ -28,10 +28,10 @@ const WineSchema = new mongoose.Schema(
 			trim: true,
 		}
 	},
-	{ minimize: false },
-);
+	{ minimize: false }
+)
 
-WineSchema.plugin(mongooseStringQuery);
+WineSchema.plugin(mongooseStringQuery)
 
-const Wine = mongoose.model('Wine', WineSchema);
-module.exports = Wine; 
+const Wine = mongoose.model('Wine', WineSchema)
+module.exports = Wine 
