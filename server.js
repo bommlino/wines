@@ -18,8 +18,10 @@ server.use(restifyPlugins.acceptParser(server.acceptable))
 server.use(restifyPlugins.queryParser({ mapParams: true }))
 server.use(restifyPlugins.fullResponse())
 
-server.listen(config.port, () => {
+// listen strats the server on the given port.
+exports.listen = function(callback) {
 
+	// console.error('connecting to db')
 	// establish connection to mongodb
 	mongoose.Promise = global.Promise
 	mongoose.connect(config.db.uri)
@@ -33,6 +35,15 @@ server.listen(config.port, () => {
 
 	db.once('open', () => {
 		require('./routes/routes')(server)
-		console.log(`Server is listening on port ${config.port}`)
 	})
-})
+
+	// let port = config.port
+	console.log('Listening on: ' + config.port)
+	server.listen(config.port, callback)
+}
+
+// // close destroys the server.
+exports.close = function (callback) {
+	console.log('closing server')
+	server.close(callback)
+}

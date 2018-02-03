@@ -1,1 +1,2 @@
-web: node index.js
+web: node start-server.js
+test: npm test
