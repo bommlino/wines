@@ -1,3 +1,2 @@
-var server = require('./server');
-const config = require('./config')
-server.listen();
+var server = require('./server')
+server.listen()

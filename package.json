@@ -25,6 +25,6 @@
     "restify-plugins": "^1.6.0"
   },
   "devDependencies": {
-    "eslint": "^4.16.0",
+    "eslint": "^4.16.0"
   }
 }
