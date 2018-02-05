@@ -79,7 +79,7 @@ describe('Insert and delete new wine ', function() {
 			.end (function (err, res) {
 				assert.equal(200, res.statusCode)
 				expect(res.body).to.be.an('array') 
-				expect(res.body).to.have.lengthOf(1) 
+				expect(res.body).to.have.lengthOf(0) 
 				done()
 			})
 	})
